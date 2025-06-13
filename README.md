@@ -16,14 +16,14 @@ Desenvolver uma aplicação orientada a objetos que:
 
 ### Zona Rural
 
-- Sem sensores.
+- Sem sensores;
 - Método `relatorio()` informa que o monitoramento é indireto via satélite.
 
 ### Zona Urbana
 
-- Permite adicionar sensores.
-- Calcula total e média semanal do AQI.
-- Classifica o nível de emergência conforme a média.
+- Permite adicionar sensores;
+- Calcula total e média semanal do AQI;
+- Classifica o nível de emergência conforme a média;
 - Exibe mensagens de alerta conforme o grau de risco.
 
 ### Classe Main
@@ -74,13 +74,8 @@ classDiagram
         + classificarNivelEmergencia(): String
     }
 
-    class Main {
-        + main(args: String[]): void
-    }
-
     Zona <|-- ZonaRural
     Zona <|-- ZonaUrbana
     ZonaUrbana ..|> Emergencia
     ZonaUrbana --> Sensor
-    Main --> Zona
 ```
